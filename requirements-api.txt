@@ -1,0 +1,14 @@
+# Dependensi LINGKUNGAN SERVING (app/).
+# Versi DI-PIN PERSIS. Alasannya dijelaskan di README bagian 6.
+#
+# PENTING: versi scikit-learn, pandas, dan numpy di bawah HARUS SAMA PERSIS
+# dengan versi yang dipakai saat melatih model, karena berkas .joblib
+# menyimpan objek scikit-learn hasil pickle. Setelah venv serving dibuat,
+# regenerasi berkas ini dengan:  pip freeze > requirements-api.txt
+scikit-learn==1.9.0
+pandas==3.0.3
+numpy==2.5.1
+joblib==1.5.3
+fastapi==0.139.2
+uvicorn==0.34.0
+pydantic==2.10.4

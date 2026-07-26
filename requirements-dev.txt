@@ -1,0 +1,15 @@
+# Dependensi LINGKUNGAN PENGUJIAN (tests/).
+#
+# Test menguji API secara utuh -- termasuk memuat model.joblib lewat
+# lifespan -- sehingga lingkungan ini harus memuat SELURUH dependensi
+# serving, bukan hanya perkakas test.
+#
+# Mewarisi requirements-api.txt secara sengaja, bukan requirements.txt:
+# dengan begitu test berjalan di atas versi pustaka yang PERSIS SAMA
+# dengan yang dipakai di lingkungan serving. Test yang lolos di versi
+# berbeda dari versi produksi tidak membuktikan apa pun tentang produksi.
+-r requirements-api.txt
+
+# --- perkakas pengujian ---
+pytest==9.1.1
+httpx==0.28.1

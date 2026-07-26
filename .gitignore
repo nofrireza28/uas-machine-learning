@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Data dan artefak model TIDAK di-commit.
+# Alasan lengkapnya ada di README bagian "Mengapa data/ dan models/ diabaikan".
+# ---------------------------------------------------------------------------
+data/*
+!data/.gitkeep
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+
+models/*
+!models/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Log prediksi API (dihasilkan saat runtime)
+logs/
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
