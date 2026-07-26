@@ -167,6 +167,10 @@ python -m venv .venv-api
 .\.venv-api\Scripts\Activate.ps1
 pip install -r requirements-api.txt
 uvicorn app.main:app --reload
+
+# Jalankan bila port 8000 sudah digunakan
+uvicorn app.main:app --reload --host 127.0.0.1 --port [port yang berbeda]
+
 ```
 
 Jalankan dari **Root Repo atau Project Directory**, bukan dari dalam `app/`. Dokumentasi interaktif tersedia di http://127.0.0.1:8000/docs
@@ -209,6 +213,7 @@ Test dijalankan di **lingkungan serving** (`.venv-api`), bukan lingkungan traini
 ```powershell
 .\.venv-api\Scripts\Activate.ps1
 pip install -r requirements-dev.txt
+# Konfigurasi test ada di file pytest.ini
 python -m pytest
 ```
 
